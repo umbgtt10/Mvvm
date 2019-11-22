@@ -14,6 +14,10 @@
         <Button Text="This is an incrementing button"
                 Command="{Binding OnButtonIncrementClickedCommand}">
         </Button>
+        <Button Text="This is a custom incrementing button"
+                Command="{Binding OnButtonCustomIncrementClickedCommand}"
+                CommandParameter="2">
+        </Button>        
         <Button Text="This is a reset button"
                 Command="{Binding OnButtonResetClickedCommand}">
         </Button>

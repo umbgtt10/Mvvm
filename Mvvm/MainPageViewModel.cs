@@ -61,6 +61,20 @@ namespace Mvvm
             }
         }
 
+        private ICommand onButtonCustomIncrementClickedCommand;
+        public ICommand OnButtonCustomIncrementClickedCommand
+        {
+            get
+            {
+                if (onButtonCustomIncrementClickedCommand == null)
+                {
+                    onButtonCustomIncrementClickedCommand = new Command<string>(IncrementCustomCommand);
+                }
+
+                return onButtonCustomIncrementClickedCommand;
+            }
+        }
+
         private ICommand onButtonResetClickedCommand;
         public ICommand OnButtonResetClickedCommand
         {
@@ -111,6 +125,12 @@ namespace Mvvm
         private void IncrementCommand()
         {
             counter++;
+            UpdateResult();
+        }
+
+        private void IncrementCustomCommand(string args)
+        {
+            counter = counter + int.Parse(args);
             UpdateResult();
         }
 

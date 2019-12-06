@@ -8,10 +8,13 @@ namespace Mvvm.Test
         [TestMethod]
         public void OnButtonIncrementClickedCommand_IncrementsResult()
         {
-            var vm = new MainPageViewModel();
+            // Arrange
+            MainPageViewModel vm = new MainPageViewModel();
 
+            // Act
             vm.OnIncrementCommand.Execute(null);
 
+            // Assert
             Assert.AreEqual("1", vm.Result);
         }
     }

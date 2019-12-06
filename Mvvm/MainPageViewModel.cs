@@ -47,79 +47,80 @@ namespace Mvvm
             }
         }
 
-        private ICommand onButtonIncrementClickedCommand;
-        public ICommand OnButtonIncrementClickedCommand
+        private ICommand onIncrementCommand;
+        public ICommand OnIncrementCommand
         {
             get
             {
-                if (onButtonIncrementClickedCommand == null)
+                if (onIncrementCommand == null)
                 {
-                    onButtonIncrementClickedCommand = new Command(IncrementCommand);
+                    onIncrementCommand = new Command(IncrementCommand);
                 }
 
-                return onButtonIncrementClickedCommand;
+                return onIncrementCommand;
             }
         }
 
-        private ICommand onButtonCustomIncrementClickedCommand;
-        public ICommand OnButtonCustomIncrementClickedCommand
+        private ICommand onCustomIncrementCommand;
+        public ICommand OnCustomIncrementCommand
         {
             get
             {
-                if (onButtonCustomIncrementClickedCommand == null)
+                if (onCustomIncrementCommand == null)
                 {
-                    onButtonCustomIncrementClickedCommand = new Command<string>(IncrementCustomCommand);
+                    onCustomIncrementCommand = new Command<string>(IncrementCustomCommand);
                 }
 
-                return onButtonCustomIncrementClickedCommand;
+                return onCustomIncrementCommand;
             }
         }
 
-        private ICommand onButtonResetClickedCommand;
-        public ICommand OnButtonResetClickedCommand
+        private ICommand onResetCommand;
+        public ICommand OnResetCommand
         {
             get
             {
-                if (onButtonResetClickedCommand == null)
+                if (onResetCommand == null)
                 {
-                    onButtonResetClickedCommand = new Command(ResetCommand);
+                    onResetCommand = new Command(ResetCommand);
                 }
 
-                return onButtonResetClickedCommand;
+                return onResetCommand;
             }
         }
 
-        private ICommand onButtonAddClickedCommand;
-        public ICommand OnButtonAddClickedCommand
+        private ICommand onAddCommand;
+        public ICommand OnAddCommand
         {
             get
             {
-                if (onButtonAddClickedCommand == null)
+                if (onAddCommand == null)
                 {
-                    onButtonAddClickedCommand = new Command(AddCommand);
+                    onAddCommand = new Command(AddCommand);
                 }
 
-                return onButtonAddClickedCommand;
+                return onAddCommand;
             }
         }
 
-        private ICommand onButtonClearClickedCommand;
-        public ICommand OnButtonClearClickedCommand
+        private ICommand onClearCommand;
+        public ICommand OnClearCommand
         {
             get
             {
-                if (onButtonClearClickedCommand == null)
+                if (onClearCommand == null)
                 {
-                    onButtonClearClickedCommand = new Command(ClearCommand);
+                    onClearCommand = new Command(ClearCommand);
                 }
 
-                return onButtonClearClickedCommand;
+                return onClearCommand;
             }
         }
 
         public MainPageViewModel()
         {
             Entries = new ObservableCollection<Entry>();
+            Result = "0";
         }
 
         private void IncrementCommand()

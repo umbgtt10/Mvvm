@@ -12,17 +12,17 @@
            VerticalOptions="Center" 
            FontSize="50"/>
         <Button Text="This is an incrementing button"
-                Command="{Binding OnButtonIncrementClickedCommand}">
+                Command="{Binding OnIncrementCommand}">
         </Button>
-        <Button Text="This is a custom incrementing button"
-                Command="{Binding OnButtonCustomIncrementClickedCommand}"
+        <Button Text="This is a double-incrementing button"
+                Command="{Binding OnCustomIncrementCommand}"
                 CommandParameter="2">
         </Button>        
         <Button Text="This is a reset button"
-                Command="{Binding OnButtonResetClickedCommand}">
+                Command="{Binding OnResetCommand}">
         </Button>
 
-        <ListView x:Name="SimpleList" ItemsSource="{Binding Entries}">
+        <ListView ItemsSource="{Binding Entries}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell 
@@ -33,10 +33,10 @@
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="This is an entry adding button"
-                Command="{Binding OnButtonAddClickedCommand}">
+                Command="{Binding OnAddCommand}">
         </Button>
         <Button Text="This is a flushing button"
-                Command="{Binding OnButtonClearClickedCommand}">
+                Command="{Binding OnClearCommand}">
         </Button>        
     </StackLayout>
 
